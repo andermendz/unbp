@@ -14,8 +14,7 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        // Get all users to display in the dashboard
-        $users = \App\Models\User::all();
-        return view('dashboard', compact('users'));
+        // Redirect to users management page instead of showing dashboard
+        return redirect()->route('users.index');
     }
 }
